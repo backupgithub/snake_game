@@ -8,12 +8,12 @@ class GameBoardTest < Minitest::Test
     gameboard = GameBoard.new
 
     board = [[nil, nil, nil, nil, nil, nil, nil, nil, nil, nil], [nil, nil, nil, nil, nil, nil, nil, nil, nil, nil], [nil, nil, nil, nil, nil, nil, nil, nil, nil, nil], [nil, nil, nil, nil, nil, nil, nil, nil, nil, nil], [nil, nil, nil, nil, nil, nil, nil, nil, nil, nil], [nil, nil, nil, nil, nil, nil, nil, nil, nil, nil], [nil, nil, nil, nil, nil, nil, nil, nil, nil, nil], [nil, nil, nil, nil, nil, nil, nil, nil, nil, nil], [nil, nil, nil, nil, nil, nil, nil, nil, nil, nil], [nil, nil, nil, nil, nil, nil, nil, nil, nil, nil]]
-    assert_equal board, gameboard.default_board
+    assert_equal board, gameboard.board_grid
   end
 
   def test_it_creates_board_grids_with_10_cells
     gameboard = GameBoard.new
-    assert_equal 10, gameboard.default_board.count
+    assert_equal 10, gameboard.board_grid.count
   end
 
 end
